@@ -1,0 +1,24 @@
+livre_id;titre;genre;annee_publication;auteur_id;Prix
+1;'Les Misérables';'Roman';'1862-01-01';1;5.99
+2;'Notre-Dame de Paris';'Roman';'1831-03-16';1;5.79
+3;'Pride and Prejudice';'Roman';'1813-01-28';2;5.89
+4;'Sense and Sensibility';'Roman';'1811-10-30';2;5.99
+5;'1984';'Dystopie';'1949-06-08';3;10.94
+6;'Animal Farm';'Dystopie';'1945-08-17';3;10.95
+7;'L\'Étranger';'Roman';'1942-05-19';4;10.95
+8;'Le Mythe de Sisyphe';'Essai';'1942-10-01';4;10.90
+9;'War and Peace';'Roman';'1869-01-01';5;10.95
+10;'Anna Karenina';'Roman';'1877-01-01';5;7.85
+11;'Les Trois Mousquetaires';'Roman';'1844-03-14';6;7.55
+12;'Le Comte de Monte-Cristo';'Roman';'1844-08-28';6;7.85
+13;'The Old Man and the Sea';'Roman';'1952-09-01';7;7.65
+14;'A Farewell to Arms';'Roman';'1929-09-27';7;10.58
+15;'A Christmas Carol';'Roman';'1843-12-19';8;11.68
+16;'David Copperfield';'Roman';'1850-05-01';8;12.58
+17;'Twenty Thousand Leagues Under the Sea';'Roman';'1870-06-20';9;10.58
+18;'Around the World in Eighty Days';'Roman';'1873-01-30';9;10.54
+19;'In Search of Lost Time';'Roman';'1913-11-14';10;10.54
+20;'Swann\'s Way';'Roman';'1913-11-14';10;10.54
+21;'Livre non empruntés';'Roman';'1917-11-14';1;10.54
+22;'Les Confessions';\N;'1782-04-03';11;\N
+23;'Robinson Crusoé';\N;'1719-01-28';12;\N

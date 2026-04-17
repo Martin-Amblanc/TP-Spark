@@ -1,0 +1,42 @@
+services:
+  spark-master:
+    image: apache/spark:4.1.1
+    container_name: spark-master-v2
+    hostname: spark-master
+    user: root
+    environment:
+      - SPARK_MODE=master
+      - MEGA_EMAIL=joly.manuel@gmail.com
+      - MEGA_PASSWORD=S8G5w-GFuFcefYr
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    volumes:
+      - ./SparkProject:/opt/spark/work-dir  # Vos scripts sur PC -> dans le conteneur
+    # On précise l'hôte pour éviter que le Master ne se ferme
+    command: >
+      bash -c "
+      apt-get update &&
+      apt-get install -y python3-pip megatools &&
+      pip3 install mega.py && sleep 10 && 
+      /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host spark-master
+      "
+      
+  spark-worker:
+    image: apache/spark:4.1.1
+    container_name: spark-worker-v2
+    user: root
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+      - SPARK_MODE=worker
+    depends_on:
+      - spark-master
+    volumes:
+      - ./SparkProject:/opt/spark/work-dir
+    working_dir: /opt/spark/work-dir
+    command: >
+      bash -c "apt-get update && 
+      apt-get install -y python3-pip megatools && 
+      pip3 install mega.py && sleep 10 && 
+      /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+      "

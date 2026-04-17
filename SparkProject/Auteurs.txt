@@ -1,0 +1,15 @@
+auteur_id;nom;prenom
+1;'Hugo';'Victor'
+2;'Austen';'Jane'
+3;'Orwell';'George'
+4;'Camus';'Albert'
+5;'Tolstoy';'Leo'
+6;'Dumas';'Alexandre'
+7;'Hemingway';'Ernest'
+8;'Dickens';'Charles'
+9;'Verne';'Jules'
+10;'Proust';'Marcel'
+11;'Rousseau';'Jean-Jacques'
+12;'Defoe';'Daniel'
+13;'Fogiel';
+14;'Montmartre';
