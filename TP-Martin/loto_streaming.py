@@ -59,7 +59,8 @@ def valider_grille(batch_df, batch_id):
         return # Si on a déjà gagné, on ignore la suite
         
     # On récupère les numéros de ce micro-batch sous forme de liste Python
-    tirages = batch_df.select("numero").rdd.flatMap(lambda x: x).collect()
+    lignes = batch_df.select("numero").collect()
+    tirages = [ligne.numero for ligne in lignes]
     
     for num in tirages:
         if num is not None and num in numeros_restants:
